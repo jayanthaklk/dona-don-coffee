@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Comic Neue', cursive; */
+}
+/* .overflow-x: hidden; */
+/* ======Nav======== */
+.nav-manu {
+    padding: 25px;
+}
+
+.fas {
+    color: whitesmoke;
+    margin-left: 20%;
+}
+
+.manu {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: whitesmoke;
+    transition: all .4s;
+}
+
+.manu-hover {
+    color: #634832;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/* end of Nav */
+
+/* header */
+header {
+    height: 100vh;
+    width: 100%;
+    background:
+        /* background:linear-gradient(rgba(0, 0, 0, 0, 63), rgba(0, 0, 0, 0, 5)), */
+        url(./images/pexels-viktoria-alipatova-2074130.jpg);
+        
+}
+
+.banner {
+    position: absolute;
+    top: 70%;
+    height: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.heading {
+      font-family: 'Comic Neue', cursive;
+      animation-name: slide;
+    animation-duration: 2s;
+}
+
+.main {
+    animation: slide;
+    animation-duration: 2s;
+    animation-delay: .5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* end of header */
+/* ====About Us==== */
+#about {
+    background: #000;
+    margin: 30px;
+    color: #dbc1ac;
+}
+
+.text {
+    font-size: 28px;
+}
+
+.about-images {
+    position: relative;
+}
+
+.about-img {
+    position: absolute;
+    width: 150px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+
+.img-1 {
+    left: 0%;
+    top: 10%;
+}
+
+/* .img-2{
+    left: 30%;
+    top: 0%;
+    z-index: 10;
+} */
+
+.img-3 {
+    left: 40%;
+    ;
+    top: 0%;
+}
+
+.img-5 {
+    left: 40%;
+    ;
+    top: 40%;
+}
+
+.about-img:hover {
+    outline: 1px solid #dbc1ac;
+    outline-offset: 32px;
+    transform: scale(2.3) rotate(10deg);
+    z-index: 30;
+    opacity: 1;
+}
+
+.about-images:hover,
+.about-img:not(:hover) {
+    opacity: 0.5;
+}
+
+.btn {
+    color: #dbc1ac;
+    font-weight: bold;
+    border: 2px solid #634832;
+    font-size: 25px;
+}
+
+.hvr-right {
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0.5s;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0);
+    position: relative;
+    transition-property: color;
+}
+
+.hvr-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #dbc1ac;
+    transition-timing-function: ease-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.hvr-right:hover,
+.hvr-right:focus,
+.hvr-right:active {
+    color: #000
+}
+
+.hvr-right:hover:before,
+.hvr-right:focus:before,
+.hvr-right:active:before {
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transform: scaleX(1);
+}
+
+/* ====footer===== */
+.fa-facebook {
+    text-align: center;
+    font-size: 40px;
+    color: #634832;
+    text-indent: 20px;
+
+}
+
+.fa-envelope {
+    text-align: center;
+    font-size: 40px;
+    color: #634832;
+    text-indent: 20px;
+}
+
+.fa-whatsapp {
+    text-align: center;
+    font-size: 40px;
+    color: #634832;
+    text-indent: 20px;
+}
+
+.btn-callus {
+    background-color: #634832;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 30%;
+    animation: slide;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+/* ====video section==== */
+.most-liked{
+    position: relative;
+    margin: 25px;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+    z-index: -1;
+} 
+.big-video{
+    height: 25%;
+    width: 25%;
+    object-fit: fill;
+}
